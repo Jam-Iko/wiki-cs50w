@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+	Create New Encyclopedia Entry
+{% endblock %}
+
+{% block body %}
+    <h1>Create New Entry</h1>
+    <form action="{% url 'create-entry-view' %}" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        	<div>{{ field.label_tag }} <br> {{ field }}</div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i></button>
+    </form>
+{% endblock %}

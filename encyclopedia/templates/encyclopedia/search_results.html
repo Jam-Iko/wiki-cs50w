@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search results
+{% endblock %}
+
+{% block body %}
+    <h1>Search Results</h1>
+
+    <ul>
+    	{% if results%}
+	        {% for result in results %}
+	            <a href="{% url 'entry-view' result %}"><li>{{ result }}</li>
+	        {% endfor %}
+	    {% else %}
+	    	<h4> Your quest has yilded no results </h4>
+	    {% endif %}
+    </ul>
+
+{% endblock %}
