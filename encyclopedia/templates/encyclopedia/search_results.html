@@ -8,13 +8,11 @@
     <h1>Search Results</h1>
 
     <ul>
-    	{% if results%}
-	        {% for result in results %}
-	            <a href="{% url 'entry-view' result %}"><li>{{ result }}</li>
-	        {% endfor %}
-	    {% else %}
-	    	<h4> Your quest has yilded no results </h4>
-	    {% endif %}
+    	{% for result in results %}
+		<a href="{% url 'entry-view' result %}"><li>{{ result }}</li>
+	{% empty %}
+		<h4> Your quest has yilded no results </h4>
+	{% endfor %}
     </ul>
 
 {% endblock %}
