@@ -9,7 +9,9 @@
 
     <ul>
         {% for entry in entries %}
-            <a href="{% url 'entry-view' entry %}"><li>{{ entry }}</li>
+                <a href="{% url 'entry-view' entry %}"><li>{{ entry }}</li>
+        {% empty %}
+                <h3>No entries to display.</h3>
         {% endfor %}
     </ul>
 
