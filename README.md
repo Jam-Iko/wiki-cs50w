@@ -1,6 +1,6 @@
 # Wiki
 
-Created as Project 1 for for CS50’s Web Programming with Python and JavaScript 2020
+Created as Project 1 for for CS50’s Web Programming with Python and JavaScript (2020 edition)
 
 ### Specification
 
